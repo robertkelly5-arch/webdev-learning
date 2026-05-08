@@ -3,13 +3,70 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Web Dev Journey</title>
+    <title>Robert Kelly - Web Developer</title>
   </head>
   <body>
-    <h1>Hi, I'm Robert Kelly</h1>
-    <p>I'm a former software developer learning modern web development 
-    and AI-powered apps in retirement.</p>
-    <h2>Why I'm doing this</h2>
-    <p>I want to learn AI.  Mainly for fun but who knows.</p>
+    <header>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+
+      <section id="about">
+        <h1>Robert Kelly</h1>
+        <p>Former Software Developer building AI-powered web apps in retirement. Based in Apex, NC</p>
+      </section>
+
+      <section id="skills">
+        <h2>What I bring</h2>
+        <ul>
+          <li>Former software developer - I understand how things are built</li> 
+          <li>Learning modern web development and AI integration</li>
+          <li>Building real tools, not just tutorials</li>
+        </ul>
+      </section>
+
+      <section id="projects">
+        <h2>Projects</h2>
+        <article>
+          <h3>Project coming soon</h3>
+          <p>Check back ina few weeks - I'm building something real.</p>
+        </article>      
+      </section>
+
+<section id="contact">
+  <h2>Get in touch</h2>
+  <form>
+    <div>
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Your name">
+    </div>
+    <div>
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="your@email.com">
+    </div>
+    <div>
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="4" 
+      placeholder="What are you working on?"></textarea>
+    </div>
+    <button type="submit">Send message</button>
+    
+  </form>
+</section>
+
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Robert Kelly. All rights reserved.</p>
+    </footer>
+
+    
+
   </body>
 </html>
