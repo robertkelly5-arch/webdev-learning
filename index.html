@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Robert Kelly - Web Developer</title>
+    <title>Peakway Studio</title>
 
     <style>
       * {
@@ -23,9 +23,19 @@
         gap: 6px;
       }
 
+      .logo {
+        font-size: 20px;
+        font-weight: 500;
+        color: white;
+        letter-spacing: 4px;
+        border: 2px solid white;
+        padding: 6px 16px;
+        border-radius: 99px;
+      }
+
       /* Class selector — targets anything with class="highlight" */
       .highlight {
-        background-color: yellow;
+        background-color: rgba(61, 12, 117, 0.308);
       }
 
       body {
@@ -44,6 +54,24 @@
         padding: 20px 40px;
         position: sticky;
         top: 0;
+      }
+
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 24px;
+      }
+
+      .nav-brand {
+        color: white;
+        font-size: 18px;
+        font-weight: 500;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 24px;
       }
 
       nav a {
@@ -101,20 +129,21 @@
       #hero {
         background-image: url('hero.jpg');
         background-size: cover;
-        background-position: center;
+        background-position: right center;
         min-height: 500px;
         display: flex;
         align-items: center;
-        padding: 0 40px;
+        justify-content: flex-start; /* horizontal center */
+        padding: 50px 30px 20px 30px;
         margin-bottom: 0;
       }
 
       .hero-content {
         background-color: rgba(0, 0, 0, 0.5);
-        padding: 40px;
+        padding: 20px;
         border-radius: 8px;
         color: white;
-        max-width: 600px;
+        max-width: 550px;
       }
 
       .hero-content p {
@@ -123,19 +152,44 @@
 
       .button-outline {
         display: inline-block;
-        background-color: #bd6b0e91;
+        background-color: #2b2b4d;
         color: white;
-        padding: 12px 24px;
+        padding: 12px 12px;
         border-radius: 6px;
         text-decoration: none;
-        margin-top: 16px;
+        margin-top: 10px;
         transition: all 0.2s;
       }
 
       .button-outline:hover {
         background-color: #31b12dbe;
       }
+      .skills-grid {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
 
+      .skill-card {
+        flex: 1;
+        min-width: 200px;
+        background-color: #f8f8f8;
+        border: 1px solid #eeeeee;
+        border-radius: 8px;
+        padding: 24px;
+      }
+
+      .skill-card h3 {
+        font-size: 16px;
+        margin-bottom: 8px;
+        color: #1a1a2e;
+      }
+
+      .skill-card p {
+        font-size: 14px;
+        color: #666666;
+        line-height: 1.6;
+      }
       input,
       textarea {
         padding: 10px 14px;
@@ -176,22 +230,47 @@
         font-weight: bold;
         color: #555555;
       }
+
+      .flex-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+        background-color: #f0f0f0;
+        padding: 20px;
+        min-height: 200px;
+      }
+
+      .flex-item {
+        background-color: #1a1a2e;
+        color: white;
+        padding: 20px 30px;
+        border-radius: 6px;
+        font-size: 24px;
+        font-weight: 500;
+      }
     </style>
   </head>
   <body>
     <header>
       <nav>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+        <div class="nav-brand">
+          <span class="logo">PWS</span>
+        </div>
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
       </nav>
     </header>
 
     <section id="hero">
       <div class="hero-content">
         <h1>Peakway Studio</h1>
-        <p>Building AI-powered web apps for small business</p>
+        <p>Building AI-powered web apps for small business professionals</p>
         <a href="#contact" class="button-outline">Get in touch</a>
       </div>
     </section>
@@ -206,11 +285,26 @@
 
       <section id="skills">
         <h2>What I bring</h2>
-        <ul>
-          <li>Former software developer - I understand how things are built</li>
-          <li>Learning modern web development and AI integration</li>
-          <li>Building real tools, not just tutorials</li>
-        </ul>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <h3>Software background</h3>
+            <p>
+              Java and Perl developer — I understand how things are built under
+              the hood.
+            </p>
+          </div>
+          <div class="skill-card">
+            <h3>AI integration</h3>
+            <p>Building AI-powered web apps using Claude and modern APIs.</p>
+          </div>
+          <div class="skill-card">
+            <h3>Modern web stack</h3>
+            <p>
+              Learning React, Next.js, and full-stack development from the
+              ground up.
+            </p>
+          </div>
+        </div>
       </section>
 
       <section id="projects">
@@ -251,10 +345,18 @@
           <button type="submit" class="button-primary">Send message</button>
         </form>
       </section>
+
+      <section id="flex-test">
+        <div class="flex-container">
+          <div class="flex-item">1</div>
+          <div class="flex-item">2</div>
+          <div class="flex-item">3</div>
+        </div>
+      </section>
     </main>
 
     <footer>
-      <p>&copy; 2026 Robert Kelly. All rights reserved.</p>
+      <p>Peakway Studio &copy; 2026</p>
     </footer>
   </body>
 </html>
