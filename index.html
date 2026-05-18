@@ -134,16 +134,17 @@
         display: flex;
         align-items: center;
         justify-content: flex-start; /* horizontal center */
-        padding: 50px 30px 20px 30px;
+        padding: 30px 30px 20px 30px;
         margin-bottom: 0;
       }
 
       .hero-content {
         background-color: rgba(0, 0, 0, 0.5);
-        padding: 20px;
-        border-radius: 8px;
+        padding: 10px 30px 40px 30px;
+        border-radius: 4px;
         color: white;
         max-width: 550px;
+        margin-top: -20px;
       }
 
       .hero-content p {
@@ -165,9 +166,9 @@
         background-color: #31b12dbe;
       }
       .skills-grid {
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         gap: 20px;
-        flex-wrap: wrap;
       }
 
       .skill-card {
@@ -250,6 +251,49 @@
         font-size: 24px;
         font-weight: 500;
       }
+
+      .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 24px;
+      }
+
+      .project-card {
+        background-color: #ffffff;
+        border: 1px solid #eeeeee;
+        border-radius: 8px;
+        padding: 24px;
+        transition: border-color 0.2s;
+      }
+
+      .project-card:hover {
+        border-color: #1a1a2e;
+      }
+
+      .project-tag {
+        font-size: 11px;
+        font-weight: 500;
+        color: #185fa5;
+        background-color: #e6f1fb;
+        padding: 3px 10px;
+        border-radius: 99px;
+        display: inline-block;
+        margin-bottom: 12px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+      }
+
+      .project-card h3 {
+        font-size: 16px;
+        margin-bottom: 8px;
+        color: #1a1a2e;
+      }
+
+      .project-card p {
+        font-size: 14px;
+        color: #666666;
+        line-height: 1.6;
+      }
     </style>
   </head>
   <body>
@@ -309,12 +353,25 @@
 
       <section id="projects">
         <h2>Projects</h2>
-        <article>
-          <h3>Project coming soon</h3>
-          <p class="highlight">
-            Check back in a few weeks - I'm building something real.
-          </p>
-        </article>
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="project-tag">Coming soon</div>
+            <h3>AI Content Generator</h3>
+            <p>
+              A tool that generates structured blog posts using the Claude API.
+            </p>
+          </article>
+          <article class="project-card">
+            <div class="project-tag">Coming soon</div>
+            <h3>Business FAQ Bot</h3>
+            <p>A RAG-powered chatbot trained on business documents.</p>
+          </article>
+          <article class="project-card">
+            <div class="project-tag">Coming soon</div>
+            <h3>Data Analysis Tool</h3>
+            <p>Upload a CSV and get AI-powered insights and charts.</p>
+          </article>
+        </div>
       </section>
 
       <section id="contact">
